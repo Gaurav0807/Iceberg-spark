@@ -1,0 +1,11 @@
+services:
+  spark:
+    build: .
+    container_name: iceberg-spark
+    working_dir: /workspace
+    command: sleep infinity
+    ports:
+      - "4040:4040"
+    volumes:
+      - ./workspace:/workspace
+      - ./warehouse:/opt/iceberg/warehouse
